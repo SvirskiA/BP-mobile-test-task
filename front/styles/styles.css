@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'San Francisco Pro Display Regular';
+}
+
+@font-face {
+    font-family: 'San Francisco Pro Display Regular';
+    src: url('./fonts/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url('../Assets/background-full/4@3x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.header_close {
+    margin-left: 21px;
+}
+
+.header_text-item {
+    margin-right: 20px;
+    font-size: 3.3vw;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+
+/* MAIN */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_heading {
+    margin-top: 153px;
+    font-size: 9.6vw;
+    line-height: 42px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.main_heading_small {
+    font-size: 7.5vw;
+}
+
+.features {
+    margin-top: 31px;
+}
+
+.features_item {
+    display: flex;
+}
+
+.features_img-wrapper {
+    display: flex;
+    margin: 0;
+    margin-right: 12px;
+}
+
+.features_img {
+    width: 22px;
+}
+
+.features_name {
+    margin: 0;
+    font-size: 4.5vw;
+    line-height: 30px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.684495);
+}
+
+.offer {
+    display: flex;
+    margin-top: 45px;
+}
+
+.offer_item {
+    width: 147px;
+    height: 180px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.offer_item__monthly {
+    background-image: url('../Assets/shape-1.svg');
+}
+
+.offer_item__annually {
+    background-image: url('../Assets/shape-2.svg');
+}
+
+.not-checked-offer {
+    opacity: 0.25;
+    transform: scale(0.9, 0.9);
+}
+
+.offer_item:first-child {
+    margin-right: 6px;
+}
+
+.offer_item-type {
+    margin-top: 27px;
+    font-size: 5vw;
+    line-height: 22px;
+}
+
+.offer_item-price {
+    margin-top: 22px;
+    font-size: 4vw;
+    line-height: 15px;
+}
+
+.offer_item-price strong {
+    font-size: 6vw;
+}
+
+.offer_item-fact {
+    width: 151px;
+    padding: 2px 0;
+    font-size: 3.7vw;
+    line-height: 18px;
+    background-color: #495795;
+    position: absolute;
+    bottom: 41px;
+    left: -2px;
+}
+
+.offer_item-price-for-period {
+    margin-top: 47px;
+    font-size: 3.2vw;
+    line-height: 15px;
+}
+
+.offer_discount {
+    height: 38px;
+    width: 38px;
+    background: #DB0000;
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 280px;
+    height: 54px;
+    margin-top: 16px;
+    border: none;
+    background: linear-gradient(270deg, #1987FF 0%, #19CCFF 100%);
+    border-radius: 30px;
+    font-size: 4.2vw;
+    line-height: 17px;
+}
+
+.info {
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.7vw;
+    opacity: 0.5;
+}
+
+.footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.7vw;
+    line-height: 13px;
+    color: #BDC0D0;
+}
+
+@media (min-height: 840px) {
+    .main_heading {
+        margin-top: 162px;
+    }
+
+    .features {
+        margin-top: 35px;
+    }
+
+    .offer {
+        margin-top: 48px;
+    }
+
+    .offer_item {
+        width: 152px;
+        height: 186px;
+    }
+
+    .offer_item-fact {
+        width: 155px;
+    }
+
+    .offer_item-price-for-period {
+        margin-top: 55px;
+    }
+
+    .btn {
+        width: 290px;
+    }
+}
+
+@media (max-height: 736px) {
+    body {
+        background-position: 0 -74px;
+    }
+
+    .header {
+        margin-top: 30px;
+    }
+
+    .main_heading {
+        margin-top: 100px;
+    }
+
+    .features {
+        margin-top: 23px;
+    }
+}
+
+@media (max-height: 667px) {
+    body {
+        background-image: url('../Assets/background-full/4@2x.png');
+    }
+
+    .header {
+        margin-top: 20px;
+    }
+
+    .main_heading {
+        margin-top: 60px;
+    }
+
+    .offer {
+        display: flex;
+        margin-top: 30px;
+    }
+}
+
+@media (max-height: 568px) {
+    .header {
+        margin-top: 10px;
+    }
+
+    .main_heading {
+        margin-top: 10px;
+    }
+
+    .features {
+        margin-top: 10px;
+    }
+
+    .offer {
+        margin-top: 20px;
+    }
+}
