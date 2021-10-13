@@ -2,7 +2,7 @@ const languages = ['en', 'es', 'fr', 'ja', 'nl', 'ru', 'zh'];
 
 const sistemLanguage = navigator.language.split('-')[0];
 
-const url = 'http://localhost:3001/';
+const url = 'http://localhost:3000/';
 
 const pricePerMonth = '$9.99';
 const pricePerYear = '$19.99';
@@ -51,9 +51,7 @@ function getLang() {
     return pageLang;
 }
 
-fetch(url + new URLSearchParams({
-    lang: getLang()
-}))
+fetch(url + 'Localizations/' + getLang() + '.json')
     .then(response => response.json())
     .then(data => translate(data));
 
